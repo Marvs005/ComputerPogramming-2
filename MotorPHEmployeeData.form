@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="MotorPHEmployeeData">
-  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="13" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="fnEmail" layout-manager="GridLayoutManager" row-count="19" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="823" height="449"/>
+      <xy x="30" y="20" width="924" height="504"/>
     </constraints>
     <properties>
       <background color="-7930020"/>
     </properties>
     <border type="none"/>
     <children>
-      <component id="3f396" class="javax.swing.JLabel">
+      <component id="3f396" class="javax.swing.JLabel" binding="fnEmployeeInformation">
         <constraints>
           <grid row="0" column="0" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -18,33 +18,37 @@
           <text value="Employee Information"/>
         </properties>
       </component>
-      <component id="d71bf" class="javax.swing.JLabel">
+      <component id="d71bf" class="javax.swing.JLabel" binding="fnFullName">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="57" height="55"/>
+          </grid>
         </constraints>
         <properties>
           <text value="Full Name:"/>
         </properties>
       </component>
-      <component id="73070" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+      <component id="cf9e6" class="javax.swing.JLabel" binding="fnWorkingHours">
         <constraints>
-          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <minimum-size width="50" height="10"/>
-            <preferred-size width="89" height="20"/>
-            <maximum-size width="100" height="100"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="cf9e6" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Working Hours:"/>
         </properties>
       </component>
-      <component id="f4d5a" class="javax.swing.JTextField" default-binding="true">
+      <component id="f4d5a" class="javax.swing.JTextField" binding="tfGrossRate">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="50" height="10"/>
+            <preferred-size width="89" height="20"/>
+            <maximum-size width="100" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="41bc8" class="javax.swing.JTextField" binding="tfWorkingHours">
         <constraints>
           <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="10"/>
@@ -52,9 +56,35 @@
             <maximum-size width="100" height="100"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
-      <component id="41bc8" class="javax.swing.JTextField" default-binding="true">
+      <component id="a1056" class="javax.swing.JLabel" binding="fnGrosspay">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Gross Pay:"/>
+        </properties>
+      </component>
+      <component id="b033" class="javax.swing.JLabel" binding="attendanceLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Attendance"/>
+        </properties>
+      </component>
+      <component id="92c6f" class="javax.swing.JLabel" binding="fnRateHours">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Rate/Hour:"/>
+        </properties>
+      </component>
+      <component id="6b190" class="javax.swing.JTextField" binding="tfRateHours">
         <constraints>
           <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="10"/>
@@ -62,43 +92,11 @@
             <maximum-size width="100" height="100"/>
           </grid>
         </constraints>
-        <properties/>
-      </component>
-      <component id="a1056" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
-        </constraints>
         <properties>
-          <text value="Gross Pay:"/>
+          <text value=""/>
         </properties>
       </component>
-      <component id="b033" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Attendance"/>
-        </properties>
-      </component>
-      <component id="92c6f" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Rate/Hour:"/>
-        </properties>
-      </component>
-      <component id="6b190" class="javax.swing.JTextField" default-binding="true">
-        <constraints>
-          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <minimum-size width="50" height="10"/>
-            <preferred-size width="89" height="20"/>
-            <maximum-size width="100" height="100"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="5ed88" class="javax.swing.JLabel">
+      <component id="5ed88" class="javax.swing.JLabel" binding="fnAddress">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -106,7 +104,7 @@
           <text value="Address:"/>
         </properties>
       </component>
-      <component id="edd3e" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="edd3e" class="javax.swing.JTextField" binding="tfAddress">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="10"/>
@@ -114,11 +112,13 @@
             <maximum-size width="100" height="100"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
-      <component id="e033c" class="javax.swing.JTextField" default-binding="true">
+      <component id="e033c" class="javax.swing.JTextField" binding="tfEmail">
         <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+          <grid row="2" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="10"/>
             <preferred-size width="89" height="20"/>
             <maximum-size width="100" height="100"/>
@@ -128,7 +128,7 @@
       </component>
       <component id="d6c04" class="javax.swing.JLabel">
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Email:"/>
@@ -144,13 +144,13 @@
       </component>
       <component id="3628a" class="javax.swing.JLabel">
         <constraints>
-          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="3" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Position:"/>
         </properties>
       </component>
-      <component id="a9e20" class="javax.swing.JTextField" default-binding="true">
+      <component id="a9e20" class="javax.swing.JTextField" binding="tfEmployeeNumber">
         <constraints>
           <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="10"/>
@@ -158,99 +158,31 @@
             <maximum-size width="100" height="100"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
-      <component id="1f640" class="javax.swing.JTextField" default-binding="true">
+      <component id="1f640" class="javax.swing.JTextField" binding="tfPosition">
         <constraints>
-          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+          <grid row="2" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="10"/>
             <preferred-size width="90" height="20"/>
             <maximum-size width="100" height="100"/>
           </grid>
         </constraints>
         <properties/>
-      </component>
-      <component id="f2c7c" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Benefits"/>
-        </properties>
-      </component>
-      <component id="4741" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Rice Subcidy:"/>
-        </properties>
-      </component>
-      <component id="888fe" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Clothing Allowance"/>
-        </properties>
-      </component>
-      <component id="209c8" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="3" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Phone Allowance"/>
-        </properties>
-      </component>
-      <component id="38163" class="javax.swing.JTextField" default-binding="true">
-        <constraints>
-          <grid row="1" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <minimum-size width="50" height="10"/>
-            <preferred-size width="90" height="20"/>
-            <maximum-size width="100" height="100"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="730eb" class="javax.swing.JTextField" default-binding="true">
-        <constraints>
-          <grid row="2" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <minimum-size width="50" height="10"/>
-            <preferred-size width="90" height="20"/>
-            <maximum-size width="100" height="100"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="5c65e" class="javax.swing.JTextField" default-binding="true">
-        <constraints>
-          <grid row="3" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <minimum-size width="50" height="10"/>
-            <preferred-size width="90" height="20"/>
-            <maximum-size width="100" height="100"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="79c8f" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Salary:"/>
-        </properties>
       </component>
       <component id="dcd6" class="javax.swing.JLabel">
         <constraints>
-          <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Net Pay:"/>
         </properties>
       </component>
-      <component id="46f87" class="javax.swing.JTextField" default-binding="true">
+      <component id="46f87" class="javax.swing.JTextField" binding="tfNetPay">
         <constraints>
-          <grid row="5" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+          <grid row="6" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="10"/>
             <preferred-size width="90" height="20"/>
             <maximum-size width="100" height="100"/>
@@ -258,9 +190,9 @@
         </constraints>
         <properties/>
       </component>
-      <component id="39d52" class="javax.swing.JLabel">
+      <component id="39d52" class="javax.swing.JLabel" binding="fnDeduction">
         <constraints>
-          <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="7" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Deductions:"/>
@@ -268,7 +200,7 @@
       </component>
       <component id="46598" class="javax.swing.JLabel">
         <constraints>
-          <grid row="7" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="8" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="SSS:"/>
@@ -276,7 +208,7 @@
       </component>
       <component id="450cf" class="javax.swing.JLabel">
         <constraints>
-          <grid row="8" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="9" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Pag Ibig:"/>
@@ -284,7 +216,7 @@
       </component>
       <component id="ecb63" class="javax.swing.JLabel">
         <constraints>
-          <grid row="9" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="14" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="PhilHealth:"/>
@@ -292,23 +224,13 @@
       </component>
       <component id="4326c" class="javax.swing.JLabel">
         <constraints>
-          <grid row="10" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="16" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Income Tax:"/>
         </properties>
       </component>
-      <component id="a9e1e" class="javax.swing.JTextField" default-binding="true">
-        <constraints>
-          <grid row="7" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <minimum-size width="50" height="10"/>
-            <preferred-size width="90" height="20"/>
-            <maximum-size width="100" height="100"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="3f4bc" class="javax.swing.JTextField" default-binding="true">
+      <component id="a9e1e" class="javax.swing.JTextField" binding="tfSSS">
         <constraints>
           <grid row="8" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="10"/>
@@ -318,7 +240,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="87406" class="javax.swing.JTextField" default-binding="true">
+      <component id="3f4bc" class="javax.swing.JTextField" binding="tfPagIbig">
         <constraints>
           <grid row="9" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="10"/>
@@ -328,9 +250,19 @@
         </constraints>
         <properties/>
       </component>
-      <component id="7371f" class="javax.swing.JTextField" default-binding="true">
+      <component id="87406" class="javax.swing.JTextField" binding="tfPhilHealth">
         <constraints>
-          <grid row="10" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+          <grid row="14" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="50" height="10"/>
+            <preferred-size width="90" height="20"/>
+            <maximum-size width="100" height="100"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="7371f" class="javax.swing.JTextField" binding="tfIncomeTax">
+        <constraints>
+          <grid row="16" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="10"/>
             <preferred-size width="90" height="20"/>
             <maximum-size width="100" height="100"/>
@@ -340,16 +272,98 @@
       </component>
       <vspacer id="c8d31">
         <constraints>
-          <grid row="12" column="6" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="18" column="6" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
       <component id="babab" class="javax.swing.JButton" binding="okayButton" default-binding="true">
         <constraints>
-          <grid row="12" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="18" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-6875"/>
           <text value="Okay"/>
+        </properties>
+      </component>
+      <component id="73070" class="javax.swing.JTextField" binding="tfFullName">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="50" height="10"/>
+            <preferred-size width="89" height="20"/>
+            <maximum-size width="100" height="100"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="79c8f" class="javax.swing.JLabel" binding="fnSalary">
+        <constraints>
+          <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Salary:"/>
+        </properties>
+      </component>
+      <component id="f2c7c" class="javax.swing.JLabel" binding="fnBenefits">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Benefits"/>
+        </properties>
+      </component>
+      <component id="38163" class="javax.swing.JTextField" binding="tfRiceSubcidy">
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="50" height="10"/>
+            <preferred-size width="90" height="20"/>
+            <maximum-size width="100" height="100"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="5c65e" class="javax.swing.JTextField" binding="tfClothingAllowance">
+        <constraints>
+          <grid row="11" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="50" height="10"/>
+            <preferred-size width="90" height="20"/>
+            <maximum-size width="100" height="100"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="4741" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Rice Subcidy:"/>
+        </properties>
+      </component>
+      <component id="888fe" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Clothing Allowance"/>
+        </properties>
+      </component>
+      <component id="209c8" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="12" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Phone Allowance"/>
+        </properties>
+      </component>
+      <component id="bd068" class="javax.swing.JTextField" binding="tfPhoneAllowance">
+        <constraints>
+          <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="50" height="10"/>
+            <preferred-size width="90" height="20"/>
+            <maximum-size width="100" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
         </properties>
       </component>
     </children>
