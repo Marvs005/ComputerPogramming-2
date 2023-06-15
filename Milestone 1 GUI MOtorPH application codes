@@ -18,7 +18,8 @@ import java.text.ParseException;
 
 
 
-public class My_Panel extends JPanel {
+public class EmployeeApplicationGUI extends JPanel {
+	private static final long serialVersionUID = 1L;
 	private static JButton EnterButton;
 	 private static JTextArea jcomp2; //This is where you enter the Employee Number
 	 private JLabel EmpNumTitle;
@@ -77,7 +78,7 @@ public class My_Panel extends JPanel {
 	 private JLabel Gross2;
 	 private JLabel Netpay2;
 
-	 public My_Panel() {
+	 public EmployeeApplicationGUI () {
 	 //construct components
 	 EnterButton = new JButton("Enter");
 	 jcomp2 = new JTextArea(5, 5);
@@ -262,15 +263,11 @@ public class My_Panel extends JPanel {
 
 
 	 public static void main(String[] args) throws IOException {
-	 JFrame frame = new JFrame("MyPanel");
+	 JFrame frame = new JFrame("EmployeeApplication");
 	 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	 frame.getContentPane().add(new MyPanel());
 	 frame.pack();
 	 frame.setVisible(true);
-
-
-
-
 
 
 	 // Button Functions
@@ -280,12 +277,7 @@ public class My_Panel extends JPanel {
 	 String inputmo = MonthDisplayBox.getText();
 	 // Attributes
 	 Employee emp = new Employee();
-
-	 /**
-	 * Declare an ArrayList of Attendance objects
-	 *
-	 * This will help us manage the data we're going to get from the CSV file.
-	 */
+	 
 	 ArrayList<Attendance> employeeAttendances = new ArrayList<Attendance>();
 
 	 BufferedReader reader2 = null;
@@ -305,80 +297,37 @@ public class My_Panel extends JPanel {
 	 DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
 	 LocalDate currentDate = LocalDate.parse(AttData[3], dateTimeFormatter);
 	 if (currentDate.getMonth() == Month.of(inputmonth) && inputnum.equals(AttData[0])) {
-	 /**
-	 * For every attendance row of the employee for the given month, create a new
-	 * Attendance object from the Attendance class.
-	 */
+	
 	 Attendance atten = new Attendance();
 
-	 /**
-	 * Notice how we are using setters here instead of directly assigning values
-	 * to the attributes. This is the correct way of assigning values to a Java
-	 * object.
-	 */
 	 atten.setEmpN(AttData[0]);
 	 atten.setLN(AttData[1]);
-	 atten.setFN(AttData[2]);
+	 atten.setLN(AttData[2]);
 	 atten.setMonthdate(AttData[3]);
 	 atten.setTimeIn(AttData[4]);
 	 atten.setTimeOut(AttData[5]);
 
 	 employeeAttendances.add(atten);
-
-	 /**
-	 * Instead of computing the hours worked here per row, we replaced it
-	 * with a method inside Attendance class called getHoursWorked(). See
-	 * definition in Attendance class and usage below.
-	 */
-	// emp.HoursWorked += (TimeOut.getHours() - TimeIn.getHours()) - 1;
-	// emp.HoursWorked2 += (TimeOut.getHours() - TimeIn.getHours()) - 1;
-
-	 /**
-	 * Since we already have getStaticSalary() in Employee class, this is no
-	 * longer needed.
-	 */
-	// emp.staticsalary = emp.HoursWorked2 * emp.HourlyRate;
 	 }
-	 }
-	 /**
-	 * After reading the whole CSV class and getting all the attendance records for the given
-	 * employee number and month, all that's left are the following:
-	 *
-	 * 1. Total hours worked for the month
-	 * 2. Gross salary based on total hours worked and hourly rate
-	 */
-
+	
 	 int totalHoursWorked = 0;
 
-	 /**
-	 * Use a for-loop to iterate over the employeeAttendances ArrayList
-	 */
 	 for (int index = 0; index < employeeAttendances.size(); index++) {
-	 /** Get one employeeAttendance object based on index */
+	
 	 Attendance currentEmployeeAttendance = employeeAttendances.get(index);
 
-	 /** Call getHoursWorked() and add it to totalHoursWorked */
 	 totalHoursWorked += currentEmployeeAttendance.getHoursWorked();
 	 }
 
-	 /**
-	 * After getting total hours worked, set the value to Employee object using setter
-	 */
+	
 	 emp.setHoursWorked(totalHoursWorked);
 
-	 /**
-	 * ===== NOTE =====
-	 * At this point, you now have an ArrayList full of Attendance objects. You can now process
-	 * it to get the weekly breakdown of hours and gross salary. The code below prints the weekly
-	 * hours for the first week of whatever chosen month you want.
-	 *
-	 * This assumes your ArrayList is sorted by date. PLEASE MAKE SURE IT IS.
-	 */
+	 
 	 int firstWeekHours = 0;
 
-	 /** Get first 7 days of the attendance list and add the hours worked to firstWeekHours */
+	 
 	 for (int dayIndex = 0; dayIndex < 7; dayIndex++) {
-	 /** If you're sure about the objects inside ArrayList, you can chain methods */
+	 
 	 firstWeekHours += employeeAttendances.get(dayIndex).getHoursWorked();
 	 }
 
@@ -424,8 +373,6 @@ public class My_Panel extends JPanel {
 	 emp.Clothes = Float.parseFloat(EmpData[16]);
 	 emp.MonthlyRate = Float.parseFloat(EmpData[17]);
 	// emp.HourlyRate = Double.parseDouble(EmpData[18]);
-
-	 /** Used setter to set the hour rate of the employee from the CSV */
 	 emp.setHourlyRate(Double.parseDouble((EmpData[18])));
 	 emp.setBasicSalary(Double.parseDouble(EmpData[13]));
 
@@ -458,11 +405,7 @@ public class My_Panel extends JPanel {
 
 	 //Salary
 
-
-
-
-
-	 //Parsing of other values before display
+	 
 	 String HourlyRates = Double.toString(emp.HourlyRate);
 	 String MonthNetPayOverall = Double.toString(emp.finalsalary());
 	 String MonthNetGrossPayOverall = Double.toString(emp.getStaticsalary());
@@ -472,8 +415,5 @@ public class My_Panel extends JPanel {
 	 monthlynetpay.setText(MonthNetPayOverall);
 
 	 }
-	 });
-
-
-	 }
-	 };
+   });	 
+)
